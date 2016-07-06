@@ -121,4 +121,12 @@ class Messages
         //If the key exists then return all messages or null
         return (isset($this->fromPrevious[$key])) ? $this->fromPrevious[$key] : null;
     }
+
+    /**
+     *
+     */
+    public function preserveMessages()
+    {
+        $this->storage[$this->storageKey] = $this->fromPrevious;
+    }
 }
